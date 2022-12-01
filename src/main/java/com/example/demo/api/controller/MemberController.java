@@ -18,6 +18,11 @@ public class MemberController {
         this.memberQueryService = memberQueryService;
     }
 
+    @GetMapping
+    public String test() {
+        return "test";
+    }
+
     @GetMapping("/all")
     public List<MemberResponse> findAll() { return this.memberQueryService.findAll(); }
 }
